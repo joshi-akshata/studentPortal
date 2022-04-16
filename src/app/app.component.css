@@ -1,0 +1,57 @@
+
+nav{
+    display: flex;
+    align-items: center;
+    position:  sticky;
+    top: 0px;
+}
+
+nav::before{
+    content: "";
+    background-color:  black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index:  -1;
+    opacity:  0.7;
+}
+
+
+/* Navigation Bar : List Styling */
+nav{
+    position: relative;
+}
+
+nav ul{
+    display: flex;
+    font-family: 'Baloon Bhai';
+}
+
+nav ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+nav ul li a{
+    color: rgb(12, 12, 12);
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+nav::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+nav ul li a:hover{
+    color: black;
+    background-color: white;
+}

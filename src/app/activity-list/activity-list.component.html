@@ -1,0 +1,25 @@
+<h1>Activity list</h1>
+    <table class="table table-striped">
+      
+            <th>id</th>
+            <th>Notice</th>
+            <th>Examdetails</th>
+            <th>Name</th>
+            <th>date</th>
+            <th>Actions</th>
+        
+        <tbody>
+            <tr *ngFor="let activity of activity">
+                <td>{{activity.id}} </td>    
+                <td>{{activity.notice}}</td>
+                <td>{{activity.examdetails}}</td>
+                <td>{{activity.name}}</td>
+                <td>{{activity.date}}</td>
+                <td>
+                    <button (click)="updateActivity(activity.id)" class="btn btn-info">update</button>
+                    <button (click)="deleteActivity(activity.id)" class="btn btn-danger" style="margin-left:10px">Delete</button>
+                     <button class="btn"><a class="btn-link" [routerLink]="['/admin']">Back</a></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>

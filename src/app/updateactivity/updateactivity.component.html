@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="updateactivity.component.css">
+    <title>Form</title>
+</head>
+
+<body>
+    <form (ngSubmit)="onSubmit()">
+        <h1>Update Activity</h1>
+        <div class="form-group">
+            <div class="wrapper">
+            <input type="text" class="form-control" placeholder="Notice" [(ngModel)]="activity.notice" autocomplete="off" id="user_input" name="Notice">
+            <input type="text" class="form-control" placeholder="Examdetails" [(ngModel)]="activity.examdetails" autocomplete="off" id="user_input1" name="Examdetails">
+            <input type="text" class="form-control" placeholder="Name" [(ngModel)]="activity.name" autocomplete="off" name="Name">
+            <input type="text" class="form-control" placeholder="date" [(ngModel)]="activity.date" autocomplete="off" id="user_input2" name="date">
+            <input type="submit" class="btnsubmit">
+        </div>
+    </div>
+    </form>
+</body>
+
+</html>
+
+
+

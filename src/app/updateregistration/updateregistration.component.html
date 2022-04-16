@@ -1,0 +1,60 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="updateregistration.component.css">
+    <title>Form</title>
+</head>
+
+<body>
+    <form (ngSubmit)="onSubmit()">
+        <h1>Add Registrations</h1>
+        <div class="form-group">
+            <div class="wrapper">
+            <input type="text" class="form-control" placeholder="fname" [(ngModel)]="register.fname" autocomplete="off" id="fname" name="fname">
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <div class="wrapper">
+            <input type="text" class="form-control" placeholder="lname" [(ngModel)]="register.lname" autocomplete="off" id="lname" name="lname">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="wrapper">
+
+            <input type="text" class="form-control" placeholder="email" [(ngModel)]="register.email" autocomplete="off" id="Email" name="Email">
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="wrapper">
+            <input type="text" class="form-control" placeholder="username" [(ngModel)]="register.username" autocomplete="off" id="username" name="username">
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="wrapper">
+            <input type="text" class="form-control" placeholder="password" [(ngModel)]="register.password" autocomplete="off" id="password" name="password">
+
+
+            <input type="submit" class="btnsubmit">
+        </div>
+    </div>
+    </form>
+</body>
+
+</html>
+
+

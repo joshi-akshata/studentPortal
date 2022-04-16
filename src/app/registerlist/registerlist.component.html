@@ -1,0 +1,30 @@
+
+
+<h2> Register List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> fname</th>
+            <th> lname </th>
+            <th> email </th>
+            <th> username </th>
+            <th> password </th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let register of register" >
+            <td> {{ register.fname }} </td>
+            <td> {{ register.lname }} </td>
+            <td> {{ register.email }} </td>
+            <td> {{ register.username }} </td>
+            <td> {{ register.password }} </td>
+            <td>
+                <button (click) = "updateRegister(register.id)" class = "btn btn-info"> Update</button>
+                <button (click)="deleteRegister(register.id)" class="btn btn-danger" style="margin-left:10px">Delete</button>
+                <button class="btn"><a class="btn-link" [routerLink]="['/admin']">Back</a></button>
+        
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,22 @@
+<h1>Activity list</h1>
+    <table class="table table-striped">
+      
+            <th>id</th>
+            <th>Notice</th>
+            <th>Examdetails</th>
+            <th>Name</th>
+            <th>date</th>
+        
+        <tbody>
+            <tr *ngFor="let activity of activity">
+                <td>{{activity.id}} </td>    
+                <td>{{activity.notice}}</td>
+                <td>{{activity.examdetails}}</td>
+                <td>{{activity.name}}</td>
+                <td>{{activity.date}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button class="btn"><a class="btn-link" [routerLink]="['/home']">Back</a></button>
+
