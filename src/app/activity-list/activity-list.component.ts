@@ -33,5 +33,4 @@ deleteActivity(id:number){
     this.getActivity();
   })
 }
-
 }

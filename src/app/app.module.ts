@@ -15,6 +15,7 @@ import { RegisterlistComponent } from './registerlist/registerlist.component';
 import { AddregistrationComponent } from './addregistration/addregistration.component';
 import { UpdateregistrationComponent } from './updateregistration/updateregistration.component';
 import { ActivitypageComponent } from './activitypage/activitypage.component';
+import { FileUploadComponent } from './file-upload/file-upload.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ActivitypageComponent } from './activitypage/activitypage.component';
     AddregistrationComponent,
     UpdateregistrationComponent,
     ActivitypageComponent,
+    FileUploadComponent,
   ],
   imports: [
     BrowserModule,

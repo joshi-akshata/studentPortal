@@ -23,4 +23,8 @@ export class ActivitypageComponent implements OnInit {
     });
   }
 
+  AddAttachment(){
+    this.router.navigate(['/addAttachment']);
+  }
+
 }
