@@ -4,6 +4,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
+    <nav>
+        <ul class="nav">
+        <li class="item"><a class="nav-link" [routerLink]="['/admin']">Back</a></li>
+        </ul>
+    </nav>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +17,7 @@
     <link rel="stylesheet" href="addregistration.component.css">
     <title>Form</title>
 </head>
-
+<section id="home">
 <body>
     <form (ngSubmit)="onSubmit()">
         <h1>Add Registration</h1>
@@ -27,8 +33,7 @@
     </div>
     </form>
 </body>
-
-<button class="btn"><a class="btn-link" [routerLink]="['/admin']">Back</a></button>
+</section>
 </html>
 
 

@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
 }
@@ -6,7 +6,6 @@ html{
     scroll-behavior:  smooth;
 }
 
-/* CSS Variables */
 :root{
     --navbar-height: 59px;
 }
@@ -155,4 +154,87 @@ section{
 
 h1{
     color: #232323;
+} */
+
+
+#home::before{
+    content: "";
+    position: absolute;
+    background: url("admin.jpg") no-repeat center center/cover; 
+    height: 722px;
+    top: 0px;
+    bottom: 10px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
 }
+
+body{
+    font-family: "Open Sans", arial;
+    background: rgb(62,189,162);
+    background: #ee9ca7;  
+    background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  
+    background: linear-gradient(to right, #ffdde1, #ee9ca7); 
+    color:#fff;
+    font-weight:300;
+  }
+
+  nav{
+    background:#00bbbb;
+    position:absolute;
+    top:0;
+    bottom:0;
+    height:100%;
+    left:0;
+    width:250px;
+  }
+
+  a {
+    position:relative;
+    text-decoration:none;
+    color:white;
+    font-size: 13px;
+    border-top:1px solid #03A2A2;  
+  }
+
+  a{
+    display:table;
+  }
+
+  .fa {
+    position: relative;
+    width:70px;
+    height: 36px;
+    text-align: center;
+    top:12px; 
+    font-size:20px;
+  }
+
+  nav .nav-text  {
+    position:relative;
+    top:12px;
+  }
+
+  a:hover{
+    color:#fff;
+    background-color:#3863F4; 
+ }
+
+ a{
+    width:250px;
+  }
+
+  nav{
+    width:70px;
+    overflow:hidden;
+   }
+
+   nav:hover{
+    width:250px;
+  }
+
+  nav{
+    -webkit-transition:width .2s linear;
+    transition:width .2s linear;
+  }

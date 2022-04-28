@@ -12,11 +12,13 @@ export class AddregistrationComponent implements OnInit {
 
   register:Register=new Register();
   id!:number;
+  submitted = false;
 
   constructor(private registerService :RegisterService,private router:Router) { }
 
   ngOnInit(): void {
   }
+
   saveRegister(){
     this.registerService.addRgister(this.register).subscribe(data =>{
       console.log(data);

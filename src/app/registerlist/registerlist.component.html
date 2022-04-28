@@ -1,7 +1,6 @@
 
-
-<h2> Register List</h2>
-<table class = "table table-striped">
+<!-- <h1> Register List</h1> -->
+<table class = "fl-table">
     <thead>
         <tr>
             <th> fname</th>
@@ -20,9 +19,9 @@
             <td> {{ register.username }} </td>
             <td> {{ register.password }} </td>
             <td>
-                <button (click) = "updateRegister(register.id)" class = "btn btn-info"> Update</button>
-                <button (click)="deleteRegister(register.id)" class="btn btn-danger" style="margin-left:10px">Delete</button>
-                <button class="btn"><a class="btn-link" [routerLink]="['/admin']">Back</a></button>
+                <button (click) = "updateRegister(register.id)" class="btn1"> Update</button>
+                <button (click)="deleteRegister(register.id)" class="btn2" style="margin-left:10px">Delete</button>
+                <button class="btn3" style="margin-left:10px"><a class="btn-link" [routerLink]="['/admin']">Back</a></button>
         
             </td>
         </tr>

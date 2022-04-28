@@ -2,7 +2,7 @@
 nav{
     display: flex;
     align-items: center;
-    position:  sticky;
+    /* position:  sticky; */
     top: 0px;
 }
 
@@ -20,9 +20,10 @@ nav::before{
 
 
 /* Navigation Bar : List Styling */
-nav{
+/* nav{
     position: relative;
-}
+    display: none;
+} */
 
 nav ul{
     display: flex;
@@ -38,6 +39,7 @@ nav ul li a{
     color: rgb(12, 12, 12);
     display: block;
     padding: 3px 22px;
+    font-size: 1.5rem;
     border-radius: 20px;
     text-decoration: none;
 }
@@ -45,7 +47,7 @@ nav ul li a{
 nav::before{
     content: "";
     background-color: black;
-    position: absolute;
+    /* position: absolute; */
     height: 100%;
     width: 100%;
     z-index: -1;

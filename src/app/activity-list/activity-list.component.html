@@ -1,13 +1,16 @@
-<h1>Activity list</h1>
-    <table class="table table-striped">
-      
+<!-- <h1>Activity list</h1> -->
+    <table class="fl-table">
+        <thead>
+            <tr>
             <th>id</th>
             <th>Notice</th>
             <th>Examdetails</th>
             <th>Name</th>
             <th>date</th>
             <th>Actions</th>
-        
+        </tr>
+        </thead>
+
         <tbody>
             <tr *ngFor="let activity of activity">
                 <td>{{activity.id}} </td>    
@@ -16,9 +19,9 @@
                 <td>{{activity.name}}</td>
                 <td>{{activity.date}}</td>
                 <td>
-                    <button (click)="updateActivity(activity.id)" class="btn btn-info">update</button>
-                    <button (click)="deleteActivity(activity.id)" class="btn btn-danger" style="margin-left:10px">Delete</button>
-                     <button class="btn"><a class="btn-link" [routerLink]="['/admin']">Back</a></button>
+                    <button (click)="updateActivity(activity.id)" class="btn1">update</button>
+                    <button (click)="deleteActivity(activity.id)" class="btn2" style="margin-left:10px">Delete</button>
+                     <button class="btn3" style="margin-left:10px"><a class="btn-link" [routerLink]="['/admin']">Back</a></button>
                 </td>
             </tr>
         </tbody>

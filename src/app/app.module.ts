@@ -16,6 +16,7 @@ import { AddregistrationComponent } from './addregistration/addregistration.comp
 import { UpdateregistrationComponent } from './updateregistration/updateregistration.component';
 import { ActivitypageComponent } from './activitypage/activitypage.component';
 import { FileUploadComponent } from './file-upload/file-upload.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { FileUploadComponent } from './file-upload/file-upload.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
 
   ],
   providers: [],
