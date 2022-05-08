@@ -16,6 +16,15 @@
 <body>
     <form (ngSubmit)="onSubmit()">
         <h1>Add Registrations</h1>
+
+        <div class="form-group">
+            <div class="wrapper">
+            <input type="text" class="form-control" placeholder="RollNo" [(ngModel)]="register.rollNo" autocomplete="off" id="RollNo" name="RollNo">
+            </div>
+
+        </div>
+
+
         <div class="form-group">
             <div class="wrapper">
             <input type="text" class="form-control" placeholder="fname" [(ngModel)]="register.fname" autocomplete="off" id="fname" name="fname">
@@ -48,6 +57,7 @@
             <div class="wrapper">
             <input type="text" class="form-control" placeholder="password" [(ngModel)]="register.password" autocomplete="off" id="password" name="password">
 
+            <input type="text" class="form-control" placeholder="Confirmpassword" [(ngModel)]="register.confirmPassword" autocomplete="off" id="password" name="ConfirmPassword">
 
             <input type="submit" class="btnsubmit">
         </div>

@@ -4,18 +4,13 @@
     <li class="item" style="margin-left: 1300px;"><a class="nav-link" [routerLink]="['/home']">Back</a></li>
     </ul>
     <!-- <button  class="att"  style="margin-bottom: 30px;" (click)="AddAttachment()">Attachment</button> -->
-    <div class="row">
-        <div class="col-8">
-          <label style="margin: 10px;">
+<!--   
             <input type="file" (change)="selectFile($event)" />
-          </label>
-        </div>
-        <div class="col-4">
+        
           <button  style="margin: 10px;" [disabled]="!selectedFiles" (click)="upload()">
             Upload
-          </button>
-        </div>
-      </div>
+          </button> -->
+       
 </nav>
 
 
@@ -23,10 +18,11 @@
         <thead>
             <tr>
             <!-- <th>id</th> -->
+            <th>ActivityName</th>
+            <th>details</th>
             <th>Notice</th>
-            <th>Examdetails</th>
-            <th>Name</th>
             <th>date</th>
+            <th>Attachment</th>
             </tr>
         </thead>
         <tbody>
@@ -36,6 +32,11 @@
                 <td>{{activity.examdetails}}</td>
                 <td>{{activity.name}}</td>
                 <td>{{activity.date}}</td>
+                <td><input type="file" (change)="selectFile($event)" />
+                  <button  style="margin: 10px;" [disabled]="!selectedFiles" (click)="upload()">
+                    Upload
+                  </button>
+                </td>
             </tr>
         </tbody>
     </table>

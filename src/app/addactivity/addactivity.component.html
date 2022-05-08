@@ -20,10 +20,14 @@
         <h1>Add Activity</h1>
         <div class="form-group">
             <div class="wrapper">
-            <input type="text" class="form-control" placeholder="Notice" [(ngModel)]="activity.notice" autocomplete="off" id="user_input" name="Notice">
-            <input type="text" class="form-control" placeholder="Examdetails" [(ngModel)]="activity.examdetails" autocomplete="off" id="user_input1" name="Examdetails">
-            <input type="text" class="form-control" placeholder="Name" [(ngModel)]="activity.name" autocomplete="off" name="Name">
-            <input type="text" class="form-control" placeholder="date" [(ngModel)]="activity.date" autocomplete="off" id="user_input2" name="date">
+            <input type="text" class="form-control" placeholder="ActivityName" [(ngModel)]="activity.notice" autocomplete="off" id="user_input" name="Notice">
+            <input type="text" class="form-control" placeholder="details" [(ngModel)]="activity.examdetails" autocomplete="off" id="user_input1" name="Examdetails">
+            <input type="text" class="form-control" placeholder="Notice" [(ngModel)]="activity.name" autocomplete="off" name="Name">
+            <input type="datetime-local" id="Test_DatetimeLocal" class="form-control"  placeholder="date" [(ngModel)]="activity.date" autocomplete="off" id="user_input2" name="date">
+            <!-- <input type="attachment" class="form-control" placeholder="Attachment" [(ngModel)]="activity.date" autocomplete="off" id="user_input2" name="attachment"> -->
+            <input type="file"  (change)="selectFile($event)"/> 
+
+            
             <input type="submit" class="btnsubmit">
         </div>
     </div>

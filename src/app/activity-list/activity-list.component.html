@@ -2,22 +2,22 @@
     <table class="fl-table">
         <thead>
             <tr>
-            <th>id</th>
+            <th>ActivityName</th>
+            <th>details</th>
             <th>Notice</th>
-            <th>Examdetails</th>
-            <th>Name</th>
             <th>date</th>
+            <th>Attachment</th>
             <th>Actions</th>
         </tr>
         </thead>
 
         <tbody>
-            <tr *ngFor="let activity of activity">
-                <td>{{activity.id}} </td>    
+            <tr *ngFor="let activity of activity">   
                 <td>{{activity.notice}}</td>
                 <td>{{activity.examdetails}}</td>
                 <td>{{activity.name}}</td>
                 <td>{{activity.date}}</td>
+                <td>{{activity.attachment}}</td>
                 <td>
                     <button (click)="updateActivity(activity.id)" class="btn1">update</button>
                     <button (click)="deleteActivity(activity.id)" class="btn2" style="margin-left:10px">Delete</button>

@@ -7,7 +7,7 @@
 }
 
 body{
-    height: 600px;
+    height: 620px;
     width: 400px;
     margin-left: 600px;
     margin-top: 20px;
@@ -15,6 +15,7 @@ body{
     justify-content: center;
     align-items: center;
     background: white;
+    /* background: none; */
 }
 
 .form{
@@ -34,7 +35,7 @@ body{
 #home::before{
     content: "";
     position: absolute;
-    background: url("Registration.jpg") no-repeat center center/cover; 
+    background: url("registration.jpg") no-repeat center center/cover; 
     height: 722px;
     top: 0px;
     bottom: 10px;
@@ -58,7 +59,7 @@ body{
 
 .wrapper input{
     width: 300px;
-    margin: 10px 0px;
+    margin: 5px 0px;
     padding: 20px 10px;
     border-radius: 8px;
     border:none;
@@ -90,16 +91,6 @@ body{
     background: #86e873;
 }
 
-/* .btn{
-    background: #64c4ea;
-    color: #fff;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-.btn:hover{
-    background: #86e873;
-} */
 
 #home1{
     display: flex;
@@ -129,7 +120,6 @@ body{
 nav{
     display: flex;
     align-items: center;
-    /* position:  sticky; */
     top: 0px;
 }
 
@@ -145,12 +135,6 @@ nav::before{
     opacity:  0.7;
 }
 
-
-/* Navigation Bar : List Styling */
-/* nav{
-    position: relative;
-    display: none;
-} */
 
 nav ul{
     display: flex;
@@ -174,7 +158,6 @@ nav ul li a{
 nav::before{
     content: "";
     background-color: black;
-    /* position: absolute; */
     height: 100%;
     width: 100%;
     z-index: -1;
@@ -183,4 +166,9 @@ nav::before{
 nav ul li a:hover{
     color: black;
     background-color: white;
+}
+
+head{
+    color: white;
+    margin-left: 600px;
 }

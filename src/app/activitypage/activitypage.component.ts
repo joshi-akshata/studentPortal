@@ -13,9 +13,13 @@ export class ActivitypageComponent implements OnInit {
 
   activity!: Activity[];
 
+  list!: any[];
+  event:any;
+
   selectedFiles?: FileList;
   currentFile?: File;
   message = '';
+  message1="file uploaded";
 
   constructor(private activityService :ActivityService,private router:Router,private uploadService: FileUploadService) { }
 
@@ -56,7 +60,14 @@ export class ActivitypageComponent implements OnInit {
         });
       }
       this.selectedFiles = undefined;
+      this.displayFile();
     }
   }
 
+  displayFile()
+  {
+      alert("file uploaded succesfully....!")
+  }
+  
+  
 }

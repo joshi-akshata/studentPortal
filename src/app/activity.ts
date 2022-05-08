@@ -5,4 +5,5 @@ export class Activity {
     examdetails!:string;
     name!:string;
     date!:Date;
+    attachment!:Document;
 }

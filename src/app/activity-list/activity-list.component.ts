@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Activity } from '../activity';
+import { File } from '../file';
 import { ActivityService } from '../activity.service';
+import { FileUploadService } from '../file-upload.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,7 +13,8 @@ import { Router } from '@angular/router';
 export class ActivityListComponent implements OnInit {
 
   activity!: Activity[];
-  constructor(private activityService :ActivityService,private router:Router) { }
+  file!: File[];
+  constructor(private activityService :ActivityService,private router:Router,private fileService:FileUploadService) { }
 
   ngOnInit(): void {
 
