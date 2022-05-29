@@ -1,0 +1,24 @@
+<nav>
+    <ul class="nav">
+    <li class="item" style="margin-left: 1300px;"><a class="nav-link" [routerLink]="['/activitypage']">Back</a></li>
+    </ul>
+</nav>
+
+
+    <table class="fl-table">
+        <tbody>
+            <tr *ngFor="let post of post">
+                <td>{{post.content}}</td>
+                <td><input type="file" (change)="selectFile($event)" />
+                  <button  style="margin: 10px;" [disabled]="!selectedFiles" (click)="upload()">
+                    Upload
+                  </button>
+                </td>
+                <td>
+                    <button (click)="updatePost(post.id)" class="btn1">update</button>
+                    <button (click)="deletePost(post.id)" class="btn2" style="margin-left:10px">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+

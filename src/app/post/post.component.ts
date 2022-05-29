@@ -1,60 +1,58 @@
 import { Component, OnInit } from '@angular/core';
-import { Activity } from '../activity';
-import { ActivityService } from '../activity.service';
+import { Post } from '../post';
+import { PostService } from '../post.service';
 import { Router } from '@angular/router';
 import { FileUploadService } from 'src/app/file-upload.service';
 
 @Component({
-  selector: 'app-addactivity',
-  templateUrl: './addactivity.component.html',
-  styleUrls: ['./addactivity.component.css']
+  selector: 'app-post',
+  templateUrl: './post.component.html',
+  styleUrls: ['./post.component.css']
 })
-export class AddactivityComponent implements OnInit {
-   activity:Activity=new Activity();
-   id!:number;
-   submitted = false;
+export class PostComponent implements OnInit {
 
-   selectedFiles?: FileList;
-   currentFile?: File;
-   message = '';
+  post:Post=new Post();
+  id!:number;
+  submitted = false;
 
-  constructor(private activityService:ActivityService,private router:Router,private uploadService: FileUploadService) { }
+  selectedFiles?: FileList;
+  currentFile?: File;
+  message = '';
+
+ constructor(private postService:PostService,private router:Router,private uploadService: FileUploadService) { }
+
 
   ngOnInit(): void {
   }
-  saveActivity(){
-    this.activityService.addActivity(this.activity).subscribe(data =>{
+
+  savePost(){
+    this.postService.addPost(this.post).subscribe(data =>{
       console.log(data);
-      this.goToActivityList();
+      this.goToPostList();
     },
     error => console.log(error));
   }
 
-  goToActivityList(){
-    this.router.navigate(['/activitylist'])
+  goToPostList(){
+    this.router.navigate(['/viewPost'])
   }
 
   onSubmit()
   {
-    if(this.activity.notice==null)
-    {
-      alert("Please add Activity Name it should not be null...!")
-
-    }
-   else{
-      console.log(this.activity)
+  
+      console.log(this.post)
       this.upload();
-      this.saveActivity();
-}
+      this.savePost();
   }
 
-  AddAttachment(){
-    this.router.navigate(['/addAttachment']);
+  AddPost(){
+    this.router.navigate(['/addPost']);
   }
 
   selectFile(event: any): void {
     this.selectedFiles = event.target.files;
   }
+
   upload(): void {
 
     if (this.selectedFiles) {
@@ -77,5 +75,4 @@ export class AddactivityComponent implements OnInit {
       this.selectedFiles = undefined;
     }
   }
-
 }

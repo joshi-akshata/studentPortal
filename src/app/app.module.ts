@@ -17,6 +17,9 @@ import { UpdateregistrationComponent } from './updateregistration/updateregistra
 import { ActivitypageComponent } from './activitypage/activitypage.component';
 import { FileUploadComponent } from './file-upload/file-upload.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PostComponent } from './post/post.component';
+import { ViewPostComponent } from './view-post/view-post.component';
+import { UpdatePostComponent } from './update-post/update-post.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     UpdateregistrationComponent,
     ActivitypageComponent,
     FileUploadComponent,
+    PostComponent,
+    ViewPostComponent,
+    UpdatePostComponent,
   ],
   imports: [
     BrowserModule,

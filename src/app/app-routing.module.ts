@@ -11,6 +11,9 @@ import { AddregistrationComponent } from './addregistration/addregistration.comp
 import { UpdateregistrationComponent } from './updateregistration/updateregistration.component';
 import { ActivitypageComponent } from './activitypage/activitypage.component';
 import { FileUploadComponent } from './file-upload/file-upload.component';
+import { PostComponent } from './post/post.component';
+import { ViewPostComponent } from './view-post/view-post.component';
+import { UpdatePostComponent } from './update-post/update-post.component';
 
 
 
@@ -27,7 +30,11 @@ const routes: Routes = [
 {path:"addregistration",component:AddregistrationComponent},
 {path:"updateregistration/:id",component:UpdateregistrationComponent},
 {path:"activitypage",component:ActivitypageComponent},
-{path:"addAttachment",component:FileUploadComponent}
+{path:"addAttachment",component:FileUploadComponent},
+{path:"addPost",component:PostComponent},
+{path:"viewPost",component:ViewPostComponent},
+{path:"updatePost/:id",component:UpdatePostComponent}
+
 
 
 
