@@ -36,9 +36,16 @@ export class AddactivityComponent implements OnInit {
 
   onSubmit()
   {
- console.log(this.activity)
- this.upload();
-  this.saveActivity();
+    if(this.activity.notice==null)
+    {
+      alert("Please add Activity Name it should not be null...!")
+
+    }
+   else{
+      console.log(this.activity)
+      this.upload();
+      this.saveActivity();
+}
   }
 
   AddAttachment(){

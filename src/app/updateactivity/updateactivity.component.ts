@@ -30,11 +30,17 @@ export class UpdateactivityComponent implements OnInit {
   
   onSubmit()
   {
-    this.activityService.updateActivity(this.id,this.activity).subscribe(data =>{
-    this.upload();
-    this.goToActivityList();
+    if(this.activity.notice==null)
+    {
+      alert("Please add Activity Name it should not be null...!")
+
+    }
+        this.activityService.updateActivity(this.id,this.activity).subscribe(data =>{
+        this.upload();
+        this.goToActivityList();
     }
     ,error =>console.log(error));
+
   }
   goToActivityList(){
     this.router.navigate(['/activitylist'])
