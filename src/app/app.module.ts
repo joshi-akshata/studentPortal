@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +22,20 @@ import { PostComponent } from './post/post.component';
 import { ViewPostComponent } from './view-post/view-post.component';
 import { UpdatePostComponent } from './update-post/update-post.component';
 
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatCardModule } from '@angular/material/card';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { PopupComponent } from './popup/popup.component';
+import { NotificationComponent } from './notification/notification.component';
+import { DownloadFilePopupComponent } from './download-file-popup/download-file-popup.component';
+import { LogoutPopupComponent } from './logout-popup/logout-popup.component';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +53,10 @@ import { UpdatePostComponent } from './update-post/update-post.component';
     PostComponent,
     ViewPostComponent,
     UpdatePostComponent,
+    PopupComponent,
+    NotificationComponent,
+    DownloadFilePopupComponent,
+    LogoutPopupComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +64,14 @@ import { UpdatePostComponent } from './update-post/update-post.component';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-
+    MatIconModule,
+    MatFormFieldModule,
+    MatToolbarModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    MatDialogModule,
+    PdfViewerModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

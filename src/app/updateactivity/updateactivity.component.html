@@ -14,20 +14,30 @@
         <h1>Update Activity</h1>
         <div class="form-group">
             <div class="wrapper">
-            <input type="text" class="form-control" placeholder="ActivityName" [(ngModel)]="activity.notice" autocomplete="off" id="user_input" name="Notice">
-            <input type="text" class="form-control" placeholder="details" [(ngModel)]="activity.examdetails" autocomplete="off" id="user_input1" name="Examdetails">
-            <input type="text" class="form-control" placeholder="Notice" [(ngModel)]="activity.name" autocomplete="off" name="Name">
-            <input type="datetime-local" id="Test_DatetimeLocal" class="form-control"  placeholder="date" [(ngModel)]="activity.date" autocomplete="off" id="user_input2" name="date">
-            <!-- <input type="text" class="form-control" placeholder="Attachment" [(ngModel)]="activity.attachment" autocomplete="off" id="user_input2" name="attachment"> -->
-          
-            <input type="file" class="form-control" (change)="selectFile($event)" /> 
-            <input type="submit" class="btnsubmit">
+                <input type="text" class="form-control" placeholder="ActivityName" [(ngModel)]="activity.name"
+                    autocomplete="off" id="user_input" name="Notice">
+                <input type="text" class="form-control" placeholder="details" [(ngModel)]="activity.examdetails"
+                    autocomplete="off" id="user_input1" name="Examdetails">
+                <input type="text" class="form-control" placeholder="Notice" [(ngModel)]="activity.notice"
+                    autocomplete="off" name="Name">
+                <input type="datetime-local" id="Test_DatetimeLocal" class="form-control" placeholder="date"
+                    [(ngModel)]="activity.date" autocomplete="off" id="user_input2" name="date">
+                <input formControlName="name" id="name" type="text" class="form-control">
+                <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['name'].errors && f['name'].errors['required']">Name is required.</div>
+                    <div *ngIf="f['name'].errors && f['name'].errors['minlength']">Name should be 3 character.</div>
+                </div>
+                <label for="file">File:</label>
+                <input formControlName="file" id="file" type="file" class="form-control"
+                    (change)="onFileChange($event)">
+                <div *ngIf="f['file'].touched && f['file'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['file'].errors && f['file'].errors['required']">File is required.</div>
+                </div>
+                <img [src]="imageSrc" *ngIf="imageSrc" style="height: 300px; width:500px">
+                <input type="submit" class="btnsubmit">
+            </div>
         </div>
-    </div>
     </form>
 </body>
 
 </html>
-
-
-

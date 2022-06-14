@@ -1,4 +1,4 @@
 export class Post {
-    id!:number;
-    content!:string;
+    id!: number;
+    content!: string;
 }

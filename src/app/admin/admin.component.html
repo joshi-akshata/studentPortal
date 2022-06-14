@@ -1,59 +1,44 @@
-
 <link rel="stylesheet" href="admin.component.css">
-<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+  rel="stylesheet">
 
 <section id="home">
-<body>
-  <nav>
 
-    <a class="btn-link" [routerLink]="['/home']">
-      <i class="fa fa-home fa-lg"></i>
-      <span class="nav-text">Home</span>
-    </a>
-  
-    <a class="btn-link" [routerLink]="['/addregistration']">
-      <i class="fa fa-plus-square"></i>
-      <span class="nav-text">RegisterStudent</span>
-    </a>
-    
-    <a class="btn-link" [routerLink]="['/registerlist']">
+  <body>
+    <nav>
+
+      <a class="btn-link" [routerLink]="['/home']">
+        <i class="fa fa-home fa-lg"></i>
+        <span class="nav-text">Home</span>
+      </a>
+
+      <a class="btn-link" [routerLink]="['/addregistration']">
+        <i class="fa fa-plus-square"></i>
+        <span class="nav-text">RegisterStudent</span>
+      </a>
+
+      <a class="btn-link" [routerLink]="['/registerlist']">
         <i class="fa fa-plus-square"></i>
         <span class="nav-text">Action</span>
-    </a>
+      </a>
 
-    <a class="btn-link" [routerLink]="['/addactivity']">
-      <i class="fa fa-plus-square"></i>
-      <span class="nav-text">AddActivity</span>
-    </a>
-  
-    <a class="btn-link" [routerLink]="['/activitylist']">
-      <i class="fa fa-plus-square"></i>
-      <span class="nav-text">Action</span>
-    </a>
-    
-    <a class="btn-link" [routerLink]="['/home']">
-        <i class="fa fa-user fa-lg"></i>
-        <span class="nav-text">Logout</span>
-    </a>
+      <a class="btn-link" [routerLink]="['/addactivity']">
+        <i class="fa fa-plus-square"></i>
+        <span class="nav-text">AddActivity</span>
+      </a>
 
-  </nav>
-</body>
+      <a class="btn-link" [routerLink]="['/activitylist']">
+        <i class="fa fa-plus-square"></i>
+        <span class="nav-text">Action</span>
+      </a>
+
+      <a>
+        <button mat-icon-button (click)="alertConfirmation()">
+          <i class="fa fa-user fa-lg"></i>
+          <span class="nav-text">Logout</span>
+        </button>
+      </a>
+
+    </nav>
+  </body>
 </section>
-<!-- <section id="nav1">
-      
-      </section>
-      <section id="nav">
-          <button class="btn"><a class="btn-link" [routerLink]="['/addregistration']">RegisterStudent</a></button>
-          <button class="btn"><a class="btn-link" [routerLink]="['/registerlist']">Action</a></button>
-        </section>
-        <section id="nav2">
-            
-            </section>
-            <section id="nav">
-          <button class="btn"><a class="btn-link" [routerLink]="['/addactivity']">AddActivity</a></button>
-          <button class="btn"><a class="btn-link" [routerLink]="['/activitylist']">Action</a></button>
-  </section>
-  <section id="home">
-      <button class="btn"><a class="btn-link" [routerLink]="['/']">Logout</a></button>
-    </section>
-  </section> -->

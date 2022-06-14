@@ -1,24 +1,29 @@
-<nav>
-    <ul class="nav">
-    <li class="item" style="margin-left: 1300px;"><a class="nav-link" [routerLink]="['/activitypage']">Back</a></li>
-    </ul>
-</nav>
+<button mat-icon-button class="btn3" style="margin-left:10px"><a class="btn-link" [routerLink]="['/home']">
+        <mat-icon class="icon">keyboard_backspace</mat-icon>Back
+    </a></button>
+<br><br><br>
 
-
-    <table class="fl-table">
-        <tbody>
-            <tr *ngFor="let post of post">
-                <td>{{post.content}}</td>
-                <td><input type="file" (change)="selectFile($event)" />
-                  <button  style="margin: 10px;" [disabled]="!selectedFiles" (click)="upload()">
-                    Upload
-                  </button>
-                </td>
-                <td>
-                    <button (click)="updatePost(post.id)" class="btn1">update</button>
-                    <button (click)="deletePost(post.id)" class="btn2" style="margin-left:10px">Delete</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
+<table class="fl-table">
+    <thead>
+        <tr>
+            <th>solution/questions</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let post of post">
+            <td>{{post.content}}</td>
+            <td>
+                <button mat-icon-button (click)="addAttachment()" class="btn1">
+                    <mat-icon class="icon">upload</mat-icon>
+                </button>
+                <button mat-icon-button (click)="updatePost(post.id)" class="btn2" style="margin-left:10px">
+                    <mat-icon class="icon">create</mat-icon>
+                </button>
+                <button mat-icon-button (click)="deletePost(post.id)" class="btn3" style="margin-left:10px">
+                    <mat-icon class="icon">delete</mat-icon>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

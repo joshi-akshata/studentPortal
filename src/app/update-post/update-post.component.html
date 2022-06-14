@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-    <nav>
-        <ul class="nav">
+<nav>
+    <ul class="nav">
         <li class="item"><a class="nav-link" [routerLink]="['/activitypage']">Back</a></li>
-        </ul>
-    </nav>
+    </ul>
+</nav>
 <section id="home">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="update-post.component.css">
-    <title>Form</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="update-post.component.css">
+        <title>Form</title>
+    </head>
 
-<body>
-    <form (ngSubmit)="onSubmit()">
-        <div class="form-group">
-            <div class="wrapper">
-            <input class="content" type="text" class="form-control" placeholder="Add Your Query Or Solution Here...." [(ngModel)]="post.content" autocomplete="off" id="user_input" name="content">
-        </div>
-        <input type="file"  (change)="selectFile($event)"/> 
-        <input type="submit" class="btnsubmit">
-    </div>
-    </form>
-</body>
+    <body>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <div class="wrapper">
+                    <input class="content" type="text" class="form-control"
+                        placeholder="Add Your Query Or Solution Here...." [(ngModel)]="post.content" autocomplete="off"
+                        id="user_input" name="content">
+                </div>
+                <input type="file" (change)="selectFile($event)" />
+                <input type="submit" class="btnsubmit">
+            </div>
+        </form>
+    </body>
 
 </section>
+
 </html>

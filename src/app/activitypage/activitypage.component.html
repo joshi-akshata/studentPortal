@@ -1,46 +1,102 @@
-<!-- <h1 style="margin-left: 650px;">Activity list</h1> -->
+<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+  rel="stylesheet">
+<mat-icon>school</mat-icon>
+
+<button mat-icon-button (click)="setCount()">
+  <mat-icon>notifications_active</mat-icon>
+  <span class="badge" *ngIf="count > 0">{{count}}</span>
+</button>
+<button mat-icon-button [routerLink]="['/home']">
+  <mat-icon class="icon">account_circle</mat-icon>
+</button>
+
 <nav>
-    <ul class="nav">
+  <ul class="nav">
     <li class="item"><a class="nav-link" [routerLink]="['/addPost']">AddPost</a></li>
     <li class="item"><a class="nav-link" [routerLink]="['/viewPost']">ViewPost</a></li>
     <li class="item"><a class="nav-link" [routerLink]="['/home']">Back</a></li>
-    </ul>
-    <!-- <button  class="att"  style="margin-bottom: 30px;" (click)="AddAttachment()">Attachment</button> -->
-<!--   
-            <input type="file" (change)="selectFile($event)" />
-        
-          <button  style="margin: 10px;" [disabled]="!selectedFiles" (click)="upload()">
-            Upload
-          </button> -->
-       
+  </ul>
+
+
+  <input formControlName="file" id="file" type="file" class="form-control" (change)="onFileChange($event)">
+  <div *ngIf="f['file'].touched && f['file'].invalid" class="alert alert-danger">
+    <div *ngIf="f['file'].errors && f['file'].errors['required']">File is required.</div>
+  </div>
+  <img [src]="imageSrc" *ngIf="imageSrc" style="height: 300px; width:500px">
+  <button [disabled]="!selectedFiles" (click)="upload()">
+    Upload
+  </button>
+
 </nav>
 
 
-    <table class="fl-table">
-        <thead>
-            <tr>
-            <!-- <th>id</th> -->
-            <th>ActivityName</th>
-            <th>details</th>
-            <th>Notice</th>
-            <th>date</th>
-            <th>Attachment</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let activity of activity">
-                <!-- <td>{{activity.id}} </td>     -->
-                <td>{{activity.notice}}</td>
-                <td>{{activity.examdetails}}</td>
-                <td>{{activity.name}}</td>
-                <td>{{activity.date}}</td>
-                <td><input type="file" (change)="selectFile($event)" />
-                  <button  style="margin: 10px;" [disabled]="!selectedFiles" (click)="upload()">
-                    Upload
-                  </button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<div class="dialog">
+  <button mat-raised-button (click)="addAttachment()" color="primary">Add Attachment
+    <mat-icon class="icon">attachment</mat-icon>
+  </button>
+</div>
 
+<mat-card>
+  <table class="fl-table">
+    <thead>
+      <tr>
+        <th>ActivityName</th>
+        <th>details</th>
+        <th>Notice</th>
+        <th>date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let activity of activity">
+        <td>{{activity.name}}</td>
+        <td>{{activity.examdetails}}</td>
+        <td>{{activity.notice}}</td>
+        <td>{{activity.date}}</td>
+      </tr>
+    </tbody>
+  </table>
+</mat-card>
 
+<section id="home">
+
+  <body>
+    <nav>
+
+      <a class="fa">
+        <button mat-icon-button [routerLink]="['/home']">
+          <mat-icon class="icon">home</mat-icon>
+          <span class="nav-text">Home</span>
+        </button>
+      </a>
+
+      <a class="fa">
+        <button mat-icon-button [routerLink]="['/addPost']">
+          <li class="fa">
+            <mat-icon>comment</mat-icon>
+          </li>
+          <span class="nav-text">AddPost</span>
+        </button>
+      </a>
+
+      <a class="fa">
+        <button mat-icon-button [routerLink]="['/viewPost']">
+          <mat-icon>view_list</mat-icon>
+          <span class="nav-text">ViewPost</span>
+        </button>
+      </a>
+
+      <a class="fa">
+        <button mat-icon-button (click)="openNotifications()">
+          <mat-icon>notifications_active</mat-icon>
+          <span class="badge" *ngIf="count > 0">{{count}}</span>
+        </button>
+      </a>
+      <a>
+        <button mat-icon-button (click)="alertConfirmation()">
+          <mat-icon class="icon">account_circle</mat-icon>
+        </button>
+      </a>
+
+    </nav>
+  </body>
+</section>

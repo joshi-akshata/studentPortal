@@ -3,6 +3,8 @@ import { Post } from '../post';
 import { PostService } from '../post.service';
 import { Router } from '@angular/router';
 import { FileUploadService } from 'src/app/file-upload.service';
+import { MatDialog } from '@angular/material/dialog';
+import { PopupComponent } from '../popup/popup.component';
 
 @Component({
   selector: 'app-view-post',
@@ -14,70 +16,45 @@ export class ViewPostComponent implements OnInit {
   post!: Post[];
 
   list!: any[];
-  event:any;
+  event: any;
 
   selectedFiles?: FileList;
   currentFile?: File;
   message = '';
-  message1="file uploaded";
+  message1 = "file uploaded";
 
-  constructor(private postService :PostService,private router:Router,private uploadService: FileUploadService) { }
+  constructor(private postService: PostService, private router: Router, private uploadService: FileUploadService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
 
     this.getPost();
   }
-  private getPost(){
-    this.postService.getPostList().subscribe(data=>{
-      this.post=data;
+  private getPost() {
+    this.postService.getPostList().subscribe(data => {
+      this.post = data;
     });
   }
 
-  AddPost(){
+  AddPost() {
     this.router.navigate(['/addPost']);
   }
 
-  selectFile(event: any): void {
-    this.selectedFiles = event.target.files;
-  }
-  upload(): void {
-    
-    if (this.selectedFiles) {
-      const file: File | null = this.selectedFiles.item(0);
-      if (file) {
-        this.currentFile = file;
-        this.uploadService.upload(this.currentFile)
-        .subscribe({
-          error: (err: any) => {
-            console.log(err);
-            if (err.error && err.error.message) {
-              this.message = err.error.message;
-            } else {
-              this.message = 'Could not upload the file!';
-            }
-            this.currentFile = undefined;
-          }
-        });
-      }
-      this.selectedFiles = undefined;
-      this.displayFile();
-    }
+  updatePost(id: number) {
+    this.router.navigate(['/updatePost', id]);
   }
 
-  displayFile()
-  {
-      alert("file uploaded succesfully....!")
-  }
-  
-  updatePost(id:number){
-    this.router.navigate(['/updatePost',id]);
-  }
-  
-  deletePost(id:number){
-    this.postService.deletePost(id).subscribe(data =>{
+  deletePost(id: number) {
+    this.postService.deletePost(id).subscribe(data => {
       console.log(data);
       this.getPost();
     })
+  }
+
+  addAttachment() {
+    const dialogRef = this.dialog.open(PopupComponent, {
+      width: '450px',
+      height: '250px'
+    });
   }
 
 }

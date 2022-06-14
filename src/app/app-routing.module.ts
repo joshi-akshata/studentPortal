@@ -17,23 +17,23 @@ import { UpdatePostComponent } from './update-post/update-post.component';
 
 
 
-
 const routes: Routes = [
- {path:'' ,redirectTo:'home',pathMatch:'full'},
-{path:"home",component:HomeComponent},
-{path:"activitylist",component:ActivityListComponent},
-{path:"addactivity",component:AddactivityComponent},
-{path:"updateactivity/:id",component:UpdateactivityComponent},
-{path:"login",component:LoginComponent},
-{path:"registerlist",component:RegisterlistComponent},
-{path:"admin",component:AdminComponent},
-{path:"addregistration",component:AddregistrationComponent},
-{path:"updateregistration/:id",component:UpdateregistrationComponent},
-{path:"activitypage",component:ActivitypageComponent},
-{path:"addAttachment",component:FileUploadComponent},
-{path:"addPost",component:PostComponent},
-{path:"viewPost",component:ViewPostComponent},
-{path:"updatePost/:id",component:UpdatePostComponent}
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: "home", component: HomeComponent },
+  { path: "activitylist", component: ActivityListComponent },
+  { path: "addactivity", component: AddactivityComponent },
+  { path: "updateactivity/:id", component: UpdateactivityComponent },
+  { path: "login", component: LoginComponent },
+  { path: "registerlist", component: RegisterlistComponent },
+  { path: "admin", component: AdminComponent },
+  { path: "addregistration", component: AddregistrationComponent },
+  { path: "updateregistration/:id", component: UpdateregistrationComponent },
+  { path: "activitypage", component: ActivitypageComponent },
+  { path: "addAttachment", component: FileUploadComponent },
+  { path: "addPost", component: PostComponent },
+  { path: "viewPost", component: ViewPostComponent },
+  { path: "updatePost/:id", component: UpdatePostComponent }
+
 
 
 

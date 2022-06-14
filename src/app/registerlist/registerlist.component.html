@@ -1,6 +1,8 @@
+<button mat-icon-button class="btn3" style="margin-left:10px"><a class="btn-link" [routerLink]="['/admin']">
+        <mat-icon class="icon">keyboard_backspace</mat-icon>
+    </a></button>
 
-<!-- <h1> Register List</h1> -->
-<table class = "fl-table">
+<table class="fl-table">
     <thead>
         <tr>
             <th>RollNo</th>
@@ -13,7 +15,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor = "let register of register" >
+        <tr *ngFor="let register of register">
             <td> {{register.rollNo }} </td>
             <td> {{ register.fname }} </td>
             <td> {{ register.lname }} </td>
@@ -21,10 +23,12 @@
             <td> {{ register.username }} </td>
             <td> {{ register.password }} </td>
             <td>
-                <button (click) = "updateRegister(register.id)" class="btn1"> Update</button>
-                <button (click)="deleteRegister(register.id)" class="btn2" style="margin-left:10px">Delete</button>
-                <button class="btn3" style="margin-left:10px"><a class="btn-link" [routerLink]="['/admin']">Back</a></button>
-        
+                <button mat-icon-button (click)="updateRegister(register.id)" class="btn1">
+                    <mat-icon class="icon">create</mat-icon>
+                </button>
+                <button mat-icon-button (click)="deleteRegister(register.id)" class="btn2" style="margin-left:10px">
+                    <mat-icon class="icon">delete</mat-icon>
+                </button>
             </td>
         </tr>
     </tbody>

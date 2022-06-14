@@ -11,41 +11,40 @@ import { FileUploadService } from 'src/app/file-upload.service';
 })
 export class PostComponent implements OnInit {
 
-  post:Post=new Post();
-  id!:number;
+  post: Post = new Post();
+  id!: number;
   submitted = false;
 
   selectedFiles?: FileList;
   currentFile?: File;
   message = '';
 
- constructor(private postService:PostService,private router:Router,private uploadService: FileUploadService) { }
+  constructor(private postService: PostService, private router: Router, private uploadService: FileUploadService) { }
 
 
   ngOnInit(): void {
   }
 
-  savePost(){
-    this.postService.addPost(this.post).subscribe(data =>{
+  savePost() {
+    this.postService.addPost(this.post).subscribe(data => {
       console.log(data);
       this.goToPostList();
     },
-    error => console.log(error));
+      error => console.log(error));
   }
 
-  goToPostList(){
+  goToPostList() {
     this.router.navigate(['/viewPost'])
   }
 
-  onSubmit()
-  {
-  
-      console.log(this.post)
-      this.upload();
-      this.savePost();
+  onSubmit() {
+
+    console.log(this.post)
+    this.upload();
+    this.savePost();
   }
 
-  AddPost(){
+  AddPost() {
     this.router.navigate(['/addPost']);
   }
 
@@ -60,17 +59,17 @@ export class PostComponent implements OnInit {
       if (file) {
         this.currentFile = file;
         this.uploadService.upload(this.currentFile)
-        .subscribe({
-          error: (err: any) => {
-            console.log(err);
-            if (err.error && err.error.message) {
-              this.message = err.error.message;
-            } else {
-              this.message = 'Could not upload the file!';
+          .subscribe({
+            error: (err: any) => {
+              console.log(err);
+              if (err.error && err.error.message) {
+                this.message = err.error.message;
+              } else {
+                this.message = 'Could not upload the file!';
+              }
+              this.currentFile = undefined;
             }
-            this.currentFile = undefined;
-          }
-        });
+          });
       }
       this.selectedFiles = undefined;
     }

@@ -1,14 +1,15 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
-    <nav>
-        <ul class="nav">
-        <li class="item"><a class="nav-link" [routerLink]="['/admin']">Back</a></li>
-        </ul>
-    </nav>
+<nav>
+    <ul class="nav">
+        <button mat-card-icon>
+            <a class="nav-link" [routerLink]="['/admin']">
+                <mat-icon class="icon">keyboard_backspace</mat-icon>
+            </a>
+        </button>
+    </ul>
+</nav>
 
 <head>
     <meta charset="UTF-8">
@@ -19,23 +20,31 @@
 </head>
 
 <section id="home">
-<body>
-    <form (ngSubmit)="onSubmit()">
-        <div class="form-group">
-            <div class="wrapper">
-           <input type="text" class="form-control" placeholder="RollNo" [(ngModel)]="register.rollNo" autocomplete="off" id="user_input" name="RollNo">
-            <input type="text" class="form-control" placeholder="fname" [(ngModel)]="register.fname" autocomplete="off" id="user_input" name="fname">
-            <input type="text" class="form-control" placeholder="lname" [(ngModel)]="register.lname" autocomplete="off" id="user_input1" name="lname">
-            <input type="text" class="form-control" placeholder="email" [(ngModel)]="register.email" autocomplete="off" name="Email" id="user_input2" >
-            <input type="text" class="form-control" placeholder="username" [(ngModel)]="register.username" autocomplete="off" id="user_input3" name="username">
-            <input type="text" class="form-control" placeholder="password" [(ngModel)]="register.password" autocomplete="off" id="user_input4" name="password">
-            <input type="text" class="form-control" placeholder="Renter Password" [(ngModel)]="register.confirmPassword" autocomplete="off" id="user_input4" name="ConfirmPassword">
-            <input type="submit" class="btnsubmit">
-        </div>
-    </div>
-    </form>
-</body>
+
+    <body>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <div class="wrapper">
+                    <input type="text" class="form-control" placeholder="RollNo" [(ngModel)]="register.rollNo"
+                        autocomplete="off" id="user_input" name="RollNo">
+                    <input type="text" class="form-control" placeholder="fname" [(ngModel)]="register.fname"
+                        autocomplete="off" id="user_input" name="fname">
+                    <input type="text" class="form-control" placeholder="lname" [(ngModel)]="register.lname"
+                        autocomplete="off" id="user_input1" name="lname">
+                    <input type="text" class="form-control" placeholder="email" [(ngModel)]="register.email"
+                        autocomplete="off" name="Email" id="user_input2">
+                    <input type="text" class="form-control" placeholder="username" [(ngModel)]="register.username"
+                        autocomplete="off" id="user_input3" name="username">
+                    <input type="text" class="form-control" placeholder="password" [(ngModel)]="register.password"
+                        autocomplete="off" id="user_input4" name="password">
+                    <input type="text" class="form-control" placeholder="Renter Password"
+                        [(ngModel)]="register.confirmPassword" autocomplete="off" id="user_input4"
+                        name="ConfirmPassword">
+                    <input type="submit" class="btnsubmit">
+                </div>
+            </div>
+        </form>
+    </body>
 </section>
+
 </html>
-
-

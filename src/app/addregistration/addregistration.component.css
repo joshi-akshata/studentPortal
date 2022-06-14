@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     height: 620px;
     width: 400px;
     margin-left: 600px;
@@ -18,7 +18,7 @@ body{
     /* background: none; */
 }
 
-.form{
+.form {
     min-height: 400px;
     min-width: 400px;
     display: flex;
@@ -32,10 +32,10 @@ body{
     background: #fff;
 }
 
-#home::before{
+#home::before {
     content: "";
     position: absolute;
-    background: url("registration.jpg") no-repeat center center/cover; 
+    background: url("registration.jpg") no-repeat center center/cover;
     height: 722px;
     top: 0px;
     bottom: 10px;
@@ -45,24 +45,24 @@ body{
     opacity: 0.89;
 }
 
-.form h1{
+.form h1 {
     font-family: 'Poppins', sans-serif;
     text-transform: capitalize;
     margin-bottom: 15px;
     text-shadow: 2px 1px rgba(0, 0, 0, 0.5);
 }
 
-.wrapper{
+.wrapper {
     display: flex;
     flex-direction: column;
 }
 
-.wrapper input{
+.wrapper input {
     width: 300px;
     margin: 5px 0px;
     padding: 20px 10px;
     border-radius: 8px;
-    border:none;
+    border: none;
     background: rgba(0, 0, 0, 0.05);
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
     font-family: 'Poppins', sans-serif;
@@ -71,34 +71,35 @@ body{
     font-size: 16px;
 }
 
-.wrapper input::placeholder{
+.wrapper input::placeholder {
     color: #000;
 }
 
-.wrapper input:focus{
+.wrapper input:focus {
     outline: none;
     background: rgba(0, 0, 0, 0.12);
 }
 
-.wrapper .btnsubmit{
+.wrapper .btnsubmit {
     background: #f2789f;
     color: #fff;
     cursor: pointer;
     margin-top: 20px;
 }
 
-.wrapper .btnsubmit:hover{
+.wrapper .btnsubmit:hover {
     background: #86e873;
 }
 
 
-#home1{
+#home1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-decoration: none;
 }
+
 .btn {
     padding: 6px 20px;
     border: 2px solid white;
@@ -107,46 +108,46 @@ body{
     margin: 17px;
     font-size: 1.5rem;
     border-radius: 10px;
-    cursor:pointer;
+    cursor: pointer;
     text-decoration: none;
 }
 
-.btn:hover{
+.btn:hover {
     color: black;
     background-color: white;
 }
 
 
-nav{
+nav {
     display: flex;
     align-items: center;
     top: 0px;
 }
 
-nav::before{
+nav::before {
     content: "";
-    background-color:  black;
+    background-color: black;
     position: absolute;
-    top:0px;
-    left:0px;
+    top: 0px;
+    left: 0px;
     height: 100%;
-    width:100%;
-    z-index:  -1;
-    opacity:  0.7;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
 }
 
 
-nav ul{
+nav ul {
     display: flex;
     font-family: 'Baloon Bhai';
 }
 
-nav ul li{
+nav ul li {
     list-style: none;
     font-size: 1.3rem;
 }
 
-nav ul li a{
+nav ul li a {
     color: rgb(248, 242, 242);
     display: block;
     padding: 3px 22px;
@@ -155,7 +156,7 @@ nav ul li a{
     text-decoration: none;
 }
 
-nav::before{
+nav::before {
     content: "";
     background-color: black;
     height: 100%;
@@ -163,12 +164,13 @@ nav::before{
     z-index: -1;
     opacity: 0.4;
 }
-nav ul li a:hover{
+
+nav ul li a:hover {
     color: black;
     background-color: white;
 }
 
-head{
+head {
     color: white;
     margin-left: 600px;
 }

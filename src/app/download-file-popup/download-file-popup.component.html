@@ -1,0 +1,23 @@
+<p>download-file-popup works!</p>
+<table class="fl-table">
+    <thead>
+        <tr>
+            <th>FileName</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let attachment of attachment">
+            <!-- <td>{{attachment.id}}</td> -->
+            <td>{{attachment.name}}</td>
+            <td><button mat-icon-button (click)="downloadFile(attachment.name,attachment.type,attachment.id)"
+                    class="btn1">
+                    <mat-icon class="icon">download</mat-icon>
+                </button>
+                <button mat-icon-button (click)="deleteFile(attachment.id)" class="btn2" style="margin-left:10px">
+                    <mat-icon class="icon">delete</mat-icon>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

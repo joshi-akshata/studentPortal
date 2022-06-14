@@ -1,25 +1,29 @@
 <link rel="stylesheet" href="login.component.css">
 <div class="body">
-<div class=" login">
-   
-   <h1> Login </h1>
-   <form method="post">
-      <div class="txt_field">
-         <input [(ngModel)]="username" placeholder="username" [ngModelOptions]="{standalone: true}" type="text" required>
-         <span></span>
-      </div>
-      <div class="txt_field">
-        <input [(ngModel)]="password" placeholder="password" [ngModelOptions]="{standalone: true}" type="password" required>
-         <span></span>
-      </div>
+   <div class=" login">
 
-      <label style="padding-right: 50px;"> login as</label>
-      <label style="padding-right: 20px;" for="admin"><input checked type="radio" value="Admin" name="isAdmin" id="admin">Admin</label>
-       <label style="padding-right: 20px;" for="student"><input type="radio" value="Student" name="isAdmin" id="student">Student</label>
-      <br><br>
-      
-   </form>
-</div>
+      <h1> Login </h1>
+      <form method="post">
+         <div class="txt_field">
+            <input [(ngModel)]="username" placeholder="username" [ngModelOptions]="{standalone: true}" type="text"
+               required>
+            <span></span>
+         </div>
+         <div class="txt_field">
+            <input [(ngModel)]="password" placeholder="password" [ngModelOptions]="{standalone: true}" type="password"
+               required>
+            <span></span>
+         </div>
+
+         <label style="padding-right: 50px;"> login as</label>
+         <label style="padding-right: 20px;" for="admin"><input checked type="radio" value="Admin" name="isAdmin"
+               id="admin">Admin</label>
+         <label style="padding-right: 20px;" for="student"><input type="radio" value="Student" name="isAdmin"
+               id="student">Student</label>
+         <br><br>
+
+      </form>
+   </div>
 
    <button class="btn" (click)="login()">Login</button>
 </div>
