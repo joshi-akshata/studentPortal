@@ -28,6 +28,19 @@ body{
     background: #fff;
 }
 
+#home::before {
+    content: "";
+    /* position: absolute; */
+    background: url("update.jpg") no-repeat center center/cover;
+    height: 722px;
+    top: 0px;
+    bottom: 10px;
+    left: 0px;
+    /* width: 100%; */
+    z-index: -1;
+    opacity: 0.89;
+}
+
 .form h1{
     font-family: 'Poppins', sans-serif;
     text-transform: capitalize;

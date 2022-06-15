@@ -12,6 +12,7 @@ import { CommonService } from '../common.service';
 import { Notification } from '../notification';
 import { NotificationService } from '../notification.service';
 import { NotificationComponent } from '../notification/notification.component';
+import { DownloadFilePopupComponent } from '../download-file-popup/download-file-popup.component';
 
 @Component({
   selector: 'app-activitypage',
@@ -170,6 +171,13 @@ export class ActivitypageComponent implements OnInit {
       } else if (result.dismiss === Swal.DismissReason.cancel) {
       }
     })
+  }
+
+  downloadFiles() {
+    const dialogRef = this.dialog.open(DownloadFilePopupComponent, {
+      width: '500px',
+      height: '500px'
+    });
   }
 
 }

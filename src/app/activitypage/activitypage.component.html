@@ -31,9 +31,12 @@
 
 
 <div class="dialog">
-  <button mat-raised-button (click)="addAttachment()" color="primary">Add Attachment
+  <button mat-raised-button style="margin-left: 10px;" (click)="addAttachment()" color="primary">Add Attachment
     <mat-icon class="icon">attachment</mat-icon>
   </button>
+    <button mat-raised-button style="margin-left: 10px;" style="color:orange" (click)="downloadFiles()" >Download Files
+      <mat-icon class="icon">download</mat-icon>
+    </button>
 </div>
 
 <mat-card>
