@@ -7,18 +7,19 @@ import { Attachment } from './attachment';
   providedIn: 'root'
 })
 export class DownloadfileService {
+  private BaseURL="http://localhost:8080/files";
 
   constructor(private httpClient: HttpClient) { }
 
   getAttachmentList(): Observable<Attachment[]> {
-    return this.httpClient.get<Attachment[]>(`http://localhost:8080/files`);
+    return this.httpClient.get<Attachment[]>(`${this.BaseURL}`);
   }
 
   getAttachmentById(name: string): Observable<Blob> {
-    return this.httpClient.get<Blob>(`http://localhost:8080/files/${name}`);
+    return this.httpClient.get<Blob>(`${this.BaseURL}/${name}`);
   }
 
   deleteFileById(id:number): Observable<Object>{
-    return this.httpClient.delete(`http://localhost:8080/files/${id}`);
+    return this.httpClient.delete(`${this.BaseURL}/${id}`);
   }
 }

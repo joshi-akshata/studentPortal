@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Router } from '@angular/router';
-import{environment} from "../../environments/environment";
 
 @Component({
   selector: 'app-login',
@@ -21,7 +20,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
+  private loginURL="http://localhost:8080/login";
   login() {
     let isAdmin: any = document.querySelector('input[name="isAdmin"]:checked');
     if (this.username == "admin" && this.password == "admin") {
@@ -45,7 +44,7 @@ export class LoginComponent implements OnInit {
       obj["username"] = this.username;
       obj["password"] = this.password;
       // this.http.post(environment.mainUrl+"/login", obj,{headers: this.headers})
-      this.http.post("http://localhost:8080/login", obj).subscribe(data => {
+      this.http.post(`${this.loginURL}`, obj).subscribe(data => {
         console.log("", data)
         if (data) {
           localStorage.setItem("isAdmin", isAdmin.value)

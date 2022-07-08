@@ -33,9 +33,10 @@ export class DownloadFilePopupComponent implements OnInit {
     this.simpleAlertBox2();
   }
 
+  private downloadFileURL="http://localhost:8080/files";
   downloadFile(name: string, type: string, id: number) {
 
-    this.http.get(`http://localhost:8080/files/${name}/${id}`, { responseType: 'blob' }).subscribe(res => {
+    this.http.get(`${this.downloadFileURL}/${name}/${id}`, { responseType: 'blob' }).subscribe(res => {
       let blob = new Blob([res], { type: type });
       let pdfUrl = window.URL.createObjectURL(blob);
 

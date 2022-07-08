@@ -8,21 +8,24 @@ import { Notification } from './notification';
 })
 export class NotificationService {
 
+  private BaseURL="http://localhost:8080/notification";
+  private NotificationCountURL=`${this.BaseURL}/count`;
+
   constructor(private httpClient: HttpClient) { }
 
   getAllNotifications(): Observable<Notification[]> {
-    return this.httpClient.get<Notification[]>(`http://localhost:8080/notification`);
+    return this.httpClient.get<Notification[]>(`${this.BaseURL}`);
   }
 
   getNotificationCount(): Observable<number> {
-    return this.httpClient.get<number>(`http://localhost:8080/notification/count`);
+    return this.httpClient.get<number>(`${this.NotificationCountURL}`);
   }
 
   getNotificationById(id: number): Observable<Notification> {
-    return this.httpClient.get<Notification>(`http://localhost:8080/notification/${id}`);
+    return this.httpClient.get<Notification>(`${this.BaseURL}/${id}`);
   }
 
   updateNotification(id: number, notification: Notification): Observable<Object> {
-    return this.httpClient.put(`http://localhost:8080/notification/${id}`, notification);
+    return this.httpClient.put(`${this.BaseURL}/${id}`, notification);
   }
 }

@@ -8,26 +8,26 @@ import { Register } from './register';
 })
 export class RegisterService {
 
-  private baseURL = "http://localhost:8080/student";
+  private BaseURL = "http://localhost:8080/student";
   constructor(private httpClient: HttpClient) { }
 
   getRegisterList(): Observable<Register[]> {
-    return this.httpClient.get<Register[]>(`${this.baseURL}`);
+    return this.httpClient.get<Register[]>(`${this.BaseURL}`);
   }
 
   addRgister(register: Register): Observable<Object> {
-    return this.httpClient.post(`http://localhost:8080/student`, register);
+    return this.httpClient.post(`${this.BaseURL}`, register);
   }
 
   getRegisterById(id: number): Observable<Register> {
-    return this.httpClient.get<Register>(`http://localhost:8080/student/${id}`);
+    return this.httpClient.get<Register>(`${this.BaseURL}/${id}`);
   }
 
   updateRegister(id: number, register: Register): Observable<Object> {
-    return this.httpClient.put(`http://localhost:8080/student/${id}`, register);
+    return this.httpClient.put(`${this.BaseURL}/${id}`, register);
   }
 
   deleteRegister(id: number): Observable<Object> {
-    return this.httpClient.delete(`http://localhost:8080/student/${id}`);
+    return this.httpClient.delete(`${this.BaseURL}/${id}`);
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
-import Swal from 'sweetalert2/dist/sweetalert2.js';
+import Swal from 'sweetalert2';
 import { FileUploadService } from 'src/app/file-upload.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 

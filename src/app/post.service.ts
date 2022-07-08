@@ -8,26 +8,27 @@ import { Post } from './post';
 })
 export class PostService {
 
-  private baseURL = "http://localhost:8080/post";
+  private BaseURL = "http://localhost:8080/post";
+  
   constructor(private httpClient: HttpClient) { }
 
   getPostList(): Observable<Post[]> {
-    return this.httpClient.get<Post[]>(`${this.baseURL}`);
+    return this.httpClient.get<Post[]>(`${this.BaseURL}`);
   }
 
   addPost(post: Post): Observable<Object> {
-    return this.httpClient.post(`http://localhost:8080/post`, post);
+    return this.httpClient.post(`${this.BaseURL}`, post);
   }
 
   getPostById(id: number): Observable<Post> {
-    return this.httpClient.get<Post>(`http://localhost:8080/post/${id}`);
+    return this.httpClient.get<Post>(`${this.BaseURL}/${id}`);
   }
 
   updatePost(id: number, post: Post): Observable<Object> {
-    return this.httpClient.put(`http://localhost:8080/post/${id}`, post);
+    return this.httpClient.put(`${this.BaseURL}/${id}`, post);
   }
 
   deletePost(id: number): Observable<Object> {
-    return this.httpClient.delete(`http://localhost:8080/post/${id}`);
+    return this.httpClient.delete(`${this.BaseURL}/${id}`);
   }
 }

@@ -9,26 +9,26 @@ import { Activity } from './activity';
 })
 export class ActivityService {
 
-  private baseURL = "http://localhost:8080/activity";
+  private BaseURL = "http://localhost:8080/activity";
   constructor(private httpClient: HttpClient) { }
 
   getActivityList(): Observable<Activity[]> {
-    return this.httpClient.get<Activity[]>(`${this.baseURL}`);
+    return this.httpClient.get<Activity[]>(`${this.BaseURL}`);
   }
 
   addActivity(activity: Activity): Observable<Object> {
-    return this.httpClient.post(`http://localhost:8080/activity`, activity);
+    return this.httpClient.post(`${this.BaseURL}`, activity);
   }
 
   getActivityById(id: number): Observable<Activity> {
-    return this.httpClient.get<Activity>(`http://localhost:8080/activity/${id}`);
+    return this.httpClient.get<Activity>(`${this.BaseURL}/${id}`);
   }
 
   updateActivity(id: number, activity: Activity): Observable<Object> {
-    return this.httpClient.put(`http://localhost:8080/activity/${id}`, activity);
+    return this.httpClient.put(`${this.BaseURL}/${id}`, activity);
   }
 
   deleteActivity(id: number): Observable<Object> {
-    return this.httpClient.delete(`http://localhost:8080/activity/${id}`);
+    return this.httpClient.delete(`${this.BaseURL}/${id}`);
   }
 }
