@@ -39,12 +39,13 @@ export class LoginComponent implements OnInit {
     }
 
 
-
+  
     else {
       let obj = Object();
       obj["username"] = this.username;
       obj["password"] = this.password;
-      this.http.post(environment.mainUrl+"/login", obj,{headers: this.headers}).subscribe(data => {
+      // this.http.post(environment.mainUrl+"/login", obj,{headers: this.headers})
+      this.http.post("http://localhost:8080/login", obj).subscribe(data => {
         console.log("", data)
         if (data) {
           localStorage.setItem("isAdmin", isAdmin.value)
